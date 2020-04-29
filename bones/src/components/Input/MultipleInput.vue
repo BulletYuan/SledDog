@@ -19,6 +19,7 @@ export default class MultipleInput extends Vue {}
   border-radius: 5px;
   font-size: 14px;
   line-height: 20px;
+  text-align: left;
   &.large {
     font-size: 16px;
     line-height: 24px;

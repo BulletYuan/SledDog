@@ -1,12 +1,14 @@
 <template>
-  <p class="content-text"></p>
+  <p class="content-text">{{content}}</p>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class ContentText extends Vue {}
+export default class ContentText extends Vue {
+  @Prop() content: string;
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

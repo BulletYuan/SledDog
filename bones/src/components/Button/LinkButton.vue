@@ -1,19 +1,25 @@
 <template>
-  <a class="link-button"></a>
+  <!-- <a class="link-button">{{content}}</a> -->
+  <button class="link-button">{{content}}</button>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class LinkButton extends Vue {}
+export default class LinkButton extends Vue {
+  @Prop() content: string;
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .link-button {
-  text-decoration: underline;
-  padding-bottom: 5px;
+  background: none;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border: none;
+  border-bottom: 1px #000 solid;
   font-size: 14px;
   line-height: 20px;
   color: #000;

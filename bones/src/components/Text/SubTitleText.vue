@@ -1,12 +1,14 @@
 <template>
-  <h3 class="sub-title-text"></h3>
+  <h3 class="sub-title-text">{{content}}</h3>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class SubTitleText extends Vue {}
+export default class SubTitleText extends Vue {
+  @Prop() content: string;
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
