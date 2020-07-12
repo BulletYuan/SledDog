@@ -1,4 +1,5 @@
 import React from 'react';
+import ErrorHandler from './services/ErrorHandler';
 
 import Header from './components/header/Header';
 import Side from './components/side/Side';
@@ -6,42 +7,30 @@ import Side from './components/side/Side';
 import './App.scss';
 import './base.scss';
 
-function initMenu() {
-  const menu = [];
-  const basicMenu = {
-    title: 'Basic',
-    children: [
-      {
-        title:'Text',
-        module:'',
-        style:'',
-      },
-      {
-        title:'Image',
-        module:'',
-        style:'',
-      },
-      {
-        title:'Video',
-        module:'',
-        style:'',
-      }
-    ]
-  }
-  menu.push(basicMenu);
-  return menu;
-}
+import MenuData from './mock/menu.json';
+import Board from './components/board/Board';
 
-function App() {
-  const menu = initMenu();
-  return (
-    <div className="App">
-      <Header />
-      <div className="body">
-        <Side menu={menu} />
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    const errorHandler = new ErrorHandler();
+    errorHandler.watch();
+  }
+  initMenu() {
+    return MenuData.data;
+  }
+  render() {
+    const menu = this.initMenu();
+    return (
+      <div className="App">
+        <Header />
+        <div className="body flex flex-justify-start flex-align-stretch">
+          <Side menu={menu} />
+          <Board />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

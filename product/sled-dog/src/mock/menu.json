@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "title": "Basic",
+      "children": [
+        {
+          "title": "Text",
+          "module": "./libs/Text/Text.js",
+          "style": "./libs/Text/Text.scss"
+        },
+        {
+          "title": "Image",
+          "module": "./libs/Image/Image.js",
+          "style": "./libs/Image/Image.scss"
+        },
+        {
+          "title": "Video",
+          "module": "./libs/Video/Video.js",
+          "style": "./libs/Video/Video.scss"
+        }
+      ]
+    }
+  ]
+}
