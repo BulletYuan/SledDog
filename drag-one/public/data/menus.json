@@ -1,0 +1,26 @@
+[
+    {
+        "id": "hash1",
+        "label": "M1"
+    },
+    {
+        "id": "hash2",
+        "label": "M2",
+        "children": [
+            {
+                "id": "hash2-1",
+                "label": "M2-1",
+                "children": [
+                    {
+                        "id": "hash2-1-1",
+                        "label": "M2-1-1"
+                    }
+                ]
+            },
+            {
+                "id": "hash2-2",
+                "label": "M2-2"
+            }
+        ]
+    }
+]
