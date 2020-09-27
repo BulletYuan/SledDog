@@ -1,0 +1,28 @@
+{
+  "name": "drag-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-static": "^5.0.0",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^9.4.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-body": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Penguin",
+    "Koa"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "10.15.x",
+    "npm": "6.4.x"
+  }
+}
