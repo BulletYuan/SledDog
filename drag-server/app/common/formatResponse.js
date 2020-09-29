@@ -13,7 +13,7 @@ const formats = (ctx,type='application/json',data={}) => {
     ctx.body=response(data);
 }
 
-modules.exports={
+module.exports={
     response,
     formats,
 }

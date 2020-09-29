@@ -1,7 +1,7 @@
 /* deps module */
 
 const Router = require('koa-router');
-const HelloController = require('./controller/HelloPenguin');
+const ComponentsController = require('./controller/Components');
 
 
 /* init module */
@@ -13,7 +13,7 @@ const router = new Router({
 
 /* uses module */
 
-router.get('/', HelloController.Penguin);
+router.get('components/:id', ComponentsController.Penguin);
 
 
 /* exportModule module */
