@@ -13,7 +13,7 @@ const router = new Router({
 
 /* uses module */
 
-router.get('components/:id', ComponentsController.Penguin);
+router.post('/components', ComponentsController.query);
 
 
 /* exportModule module */

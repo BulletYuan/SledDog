@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "id": "base",
+            "src": "/resources/components/base.component",
+            "label": "Base Components",
+            "img": ""
+        },
+        {
+            "id": "form",
+            "src": "/resources/components/form.component",
+            "label": "Form Components",
+            "img": ""
+        }
+    ]
+}

@@ -3,7 +3,7 @@
 const path = require('path');
 
 const Koa = require('koa');
-const static=require('koa-static');
+const static = require('koa-static');
 const cors = require('koa-cors');
 const koaBody = require('koa-body');
 const bodyParser = require('koa-bodyparser');
@@ -11,7 +11,7 @@ const bodyParser = require('koa-bodyparser');
 
 /* init module */
 
-const staticPath=path.join(__dirname,'public','dist');
+const staticPath = path.join(__dirname, 'public', 'resources');
 
 const app = new Koa();
 app.keys = ['Penguin-1601211807085-Koa']
@@ -36,15 +36,15 @@ app.use(cors({
 app.use(koaBody({
     multipart: true,                    // allow mutiple files
     urlencoded: true,                   // allow encoded content
-    formidable:{
-        uploadDir: path.join(__dirname,'public','upload'),   // upload dir
+    formidable: {
+        uploadDir: path.join(__dirname, 'public', 'upload'),   // upload dir
         maxFileSies: 20 * 1024 * 1024,  // MAX 20MB
     }
 }));
 app.use(bodyParser());
 app
-.use(router.routes())
-.use(router.allowedMethods());
+    .use(router.routes())
+    .use(router.allowedMethods());
 
 
 /* port module */
